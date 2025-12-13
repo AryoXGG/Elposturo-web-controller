@@ -1,0 +1,237 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom UI styles for Dashboard & Riwayat */
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: #f8f9fb;
+    padding: 20px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.04);
+}
+
+.brand {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 12px;
+    font-weight: 600;
+}
+
+.list-group-item.active {
+    background-color: #e9ecef;
+    color: #0d6efd;
+}
+
+.content {
+    flex: 1;
+    padding: 36px;
+}
+
+.panel {
+    background: #fff;
+    border: 1px solid #dedede;
+    padding: 28px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.grid {
+    display: flex;
+    gap: 18px;
+    margin: 18px 0 26px;
+}
+
+.status-box {
+    background: #efefef;
+    padding: 14px 18px;
+    min-width: 200px;
+}
+
+.status-box .label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.status-box .value {
+    font-weight: 700;
+}
+
+.timer-form {
+    margin-top: 18px;
+}
+
+.timer-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.timer-row input {
+    width: 70px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.history-table th {
+    background: #ececec;
+    padding: 12px;
+    text-align: left;
+}
+
+.history-table td {
+    padding: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Adjustments to play nicely with Bootstrap */
+.sidebar {
+    padding: 28px 18px;
+}
+
+.panel {
+    padding: 24px;
+}
+
+.btn {
+    box-shadow: none;
+}
+
+/* Colorful theme additions */
+:root {
+    --accent: #0d6efd;
+    /* blue */
+    --accent-2: #6610f2;
+    /* purple */
+    --accent-3: #20c997;
+    /* green */
+    --muted: #6c757d;
+    --sidebar-bg-start: #0d6efd;
+    --sidebar-bg-end: #6610f2;
+    --card-accent: rgba(13, 110, 253, 0.08);
+    --table-odd: rgba(13, 110, 253, 0.04);
+    --table-hover: rgba(102, 16, 242, 0.04);
+}
+
+/* Sidebar - colorful gradient */
+.sidebar {
+    background: linear-gradient(180deg, var(--sidebar-bg-start), var(--sidebar-bg-end));
+    color: #fff !important;
+}
+
+.sidebar .brand {
+    color: #fff;
+}
+
+.sidebar .small {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.list-group-item {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.95);
+    border-radius: 6px;
+    transition: all .15s ease;
+}
+
+.list-group-item:hover {
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.list-group-item.active {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-left: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Cards with subtle accent */
+.card {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(22, 27, 40, 0.04);
+    background: linear-gradient(180deg, #ffffff, #fbfbff);
+}
+
+.card.p-3::before {
+    content: '';
+    display: block;
+    height: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    margin: -24px -24px 12px -24px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border: none;
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.18);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+/* Table accents */
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: var(--table-odd);
+}
+
+.table>tbody>tr:hover {
+    background-color: var(--table-hover);
+}
+
+.history-table th {
+    color: var(--muted);
+}
+
+/* small responsive tweaks */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        padding: 12px;
+    }
+}
+
+/* Dark mode removed */

@@ -26,7 +26,7 @@
         <nav class="sidebar bg-light border-end">
             <div class="p-3">
                 <div class="brand h5 mb-1">ElPosturo</div>
-                <div class="small text-muted mb-3">Posture Reminder System</div>
+                <div class="small text-muted mb-3">Postur Reminder System</div>
 
                 <div class="list-group">
                     <a href="{{ route('dashboard') }}" class="list-group-item list-group-item-action">DashBoard</a>

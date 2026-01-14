@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4">
             <div class="card p-3">
-                <div class="text-muted small">DERAJAT TEKANAN</div>
+                <div class="text-muted small">DERAJAT POSTUR</div>
                 <div id="pressureValue" class="h5 mt-2">—°</div>
             </div>
         </div>

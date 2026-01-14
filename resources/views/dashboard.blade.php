@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <h2 style="font-weight:700;">POSTURE MONITORING</h2>
+    <h2 style="font-weight:700;">POSTUR MONITORING</h2>
 
     <div class="row g-3 mb-3">
         <div class="col-md-4">

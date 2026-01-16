@@ -3,21 +3,31 @@
 @section('title', 'Riwayat')
 
 @section('content')
-    <h2 style="font-weight:700;">RIWAYAT POSTURE MONITORING</h2>
+<div class="container-fluid py-4">
+    <div class="mb-4">
+        <h2 class="fw-bold text-dark m-0" style="font-family: sans-serif;">
+            RIWAYAT DATA
+        </h2>
+    </div>
 
-    <table class="table table-striped history-table">
-        <thead>
-            <tr>
-                <th>Tanggal</th>
-                <th>Jam mulai</th>
-                <th>Jam selesai</th>
-                <th>Bungkuk</th>
-                <th>Status akhir</th>
-            </tr>
-        </thead>
-        <tbody id="historyBody">
-            <!-- Rows will be filled by JavaScript fetching /api/history or /api/riwayat -->
-        </tbody>
-    </table>
-
+    <div class="card card-modern bg-white shadow-sm">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="py-4 ps-4 text-uppercase text-secondary small fw-bold border-0">Tanggal</th>
+                        <th class="py-4 text-uppercase text-secondary small fw-bold border-0">Jam Mulai</th>
+                        <th class="py-4 text-uppercase text-secondary small fw-bold border-0">Jam Selesai</th>
+                        <th class="py-4 text-uppercase text-secondary small fw-bold border-0">Jml. Bungkuk</th>
+                        <th class="py-4 pe-4 text-uppercase text-secondary small fw-bold border-0">Status Akhir</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody" class="border-top-0">
+                    </tbody>
+            </table>
+        </div>
+        
+       
+    </div>
+</div>
 @endsection

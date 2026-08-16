@@ -1,4 +1,5 @@
 import './bootstrap'; // Bawaan Laravel, biarkan saja
+import './ firebase-config'
 
 function getCsrfToken() {
     const m = document.querySelector('meta[name="csrf-token"]');
@@ -140,3 +141,5 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('statusValue')) initDashboard();
     if (document.getElementById('historyBody')) initRiwayat();
 });
+
+console.log('✅ App.js loaded');
